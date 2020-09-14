@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Дмитрий Леин](https://up.htmlacademy.ru/htmlcss/29/user/1347475).
-* Наставник: `Неизвестно`.
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/nyukalopavel).
 
 ---
 
