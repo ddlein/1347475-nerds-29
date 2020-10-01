@@ -1,194 +1,208 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
+  TODO добавить шрифты и стили и уточнить очередность
 </head>
 
-<body>
-  <header>
-    <nav>
-      <a>
+<body class="page-body">
+  <header class="main-header">
+    <nav class="main-nav">
+      <a class="main-header-logo">
         <img src="https://via.placeholder.com/160x65" width="160" height="65" alt="Логотип сайта Нердс">
       </a>
-      <ul>
-        <li><a href="">Студия</a></li>
-        <li><a href="">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="">Контакты</a></li>
+      <ul class="site-nav">
+        <li class="site-nav-button"><a href="">Студия</a></li>
+        <li class="site-nav-button"><a href="">Клиенты</a></li>
+        <li class="site-nav-button"><a href="catalog.html">Магазин</a></li>
+        <li class="site-nav-button"><a href="">Контакты</a></li>
       </ul>
-      <a href="">Корзина</a>
+      <a class="basket" href="">Корзина</a>
     </nav>
   </header>
-  <main>
-    <h1>Интернет магазин «Nerds»</h1>
-    <section>
-      <h2>Преимущества</h2>
-      <ul>
-        <li>
-          <h3>
+  <main class="container">
+    <h1 class="main-title hidden-title">Интернет магазин «Nerds»</h1>
+    <section class="features">
+      <h2 class="hidden-title">Преимущества</h2>
+      <ul class="features-slider">
+        <li class="feature-item">
+          <h3 class="feature-title">
             Долго, дорого, <br>
             скрупулезно
           </h3>
-          <p>
+          <p class="feature-subtitle">
             Математически выверенный дизайн<br>
             для вашего сайта или мобильного приложения
           </p>
-          <a href="">Узнать больше</a>
+          <a class="feature-button" href="">Узнать больше</a>
         </li>
-        <li>
-          <h3>
+        <li class="feature-item">
+          <h3 class="feature-title">
             Любим математику<br>
             как никто другой
           </h3>
-          <p>
+          <p class="feature-subtitle">
             Никакого креатива, только математические формулы<br>
             для расчета идеальных пропорций
           </p>
-          <a href="">Узнать больше</a>
+          <a class="feature-button" href="">Узнать больше</a>
         </li>
-        <li>
-          <h3>
+        <li class="feature-item">
+          <h3 class="feature-title">
             Только ночь,<br>
             только хардкор
           </h3>
-          <p>
+          <p class="feature-subtitle">
             Работать днем, как все? Мы против этого.<br>
             Ближе к полуночи работа только начинается
           </p>
-          <a href="">узнать больше</a>
+          <a class="feature-button" href="">узнать больше</a>
         </li>
       </ul>
     </section>
-    <section>
-      <h2>Предложения услуг</h2>
-      <ul>
-        <li>
+    <section class="order">
+      <h2 class="hidden-title">Предложения услуг</h2>
+      <ul class="order-list">
+        <li class="order-item">
           <img src="https://via.placeholder.com/300x146" width="300" height="146" alt="Веб-сайт">
-          <h3>веб-сайты</h4>
-            <p>
+          <h3 class="order-title">Веб-сайты</h4>
+            <p class="oreder-subtitle">
               Мир никогда не будет прежним<br>
               после того как увидит ваш сайт!
             </p>
-            <a href="">Заказать</a>
+            <a class="order-button" href="">Заказать</a>
         </li>
         <li>
           <img src="https://via.placeholder.com/300x146" width="300" height="146" alt="Приложение на iOS и Android">
-          <h3>Приложения</h4>
-            <p>
+          <h3 class="order-title">Приложения</h4>
+            <p class="order-subtitle">
               Покорите топ-10 приложений в<br>
               AppStore и Google Play
             </p>
-            <a href="">заказать</a>
+            <a class="order-button" class="order-button" href="">Заказать</a>
         </li>
         <li>
           <img src="https://via.placeholder.com/300x146" width="300" height="146" alt="Веб-сайт">
-          <h3>Презентации</h4>
-            <p>
+          <h3 class="order-title">Презентации</h4>
+            <p class="order-subtitle">
               Вы даже не подозреваете,<br>
               насколько вы изумительны!
             </p>
-            <a href="">заказать</a>
+            <a class="order-button" class="order-button" href="">Заказать</a>
         </li>
       </ul>
     </section>
-    <section>
-      <h2>О нас</h2>
-      <p>
+    <section class="about">
+      <h2 class="hidden-title">О нас</h2>
+      <p class="about-slogan">
         Мы - маленькая, но гордая<br>
         дизайн-студия из Краснодара.
       </p>
-      <p>
+      <p class="about-text">
         Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
         превыше креатива. Работаем не покладая рук, как роботы.
       </p>
-      <p>выполняем заказы на разработку:</p>
-      <ul>
-        <li>Веб-сайтов любой сложности</li>
-        <li>Мобильных приложений для iOS и Android</li>
-        <li>Слайдшоу и видео для корпоративных презентаций</li>
+      <p class="about-order">Выполняем заказы на разработку:</p>
+      <ul class="about-order-list">
+        <li class="about-order-item">Веб-сайтов любой сложности</li>
+        <li class="about-order-item">Мобильных приложений для iOS и Android</li>
+        <li class="about-order-item">Слайдшоу и видео для корпоративных презентаций</li>
       </ul>
       <img src="https://via.placeholder.com/360x208" width="360" height="208" alt="Логотип Нердс">
-      <p>с 2004 года любим точность во всем:</p>
+      <p class="">С 2004 года любим точность во всем:</p>
       <ul>
         <li>
-          <span>146%</span>
-          <p>
+          <span class="about-percents">146%</span>
+          <p class="about-percents-explanation">
             Уровень<br>
             самоотдачи
           </p>
         </li>
         <li>
-          <span>100%</span>
-          <p>
+          <span class="about-percents">100%</span>
+          <p class="about-percents-explanation">
             Соблюдение<br>
             сроков
           </p>
         </li>
         <li>
-          <span>50%</span>
-          <p>
+          <span class="about-percents">50%</span>
+          <p class="about-percents-explanation">
             Минимальная<br>
             предоплата
           </p>
         </li>
       </ul>
     </section>
-    <section>
-      <h2>Компании</h2>
-      <ul>
-        <li>
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
+    <section class="company">
+      <h2 class="hidden-title">Компании</h2>
+      <ul class="company-list">
+        <li class="company-item">
+          <a class="company-logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="https://via.placeholder.com/199x67" width="199" height="67" alt="Логотип HTML Academy">
           </a>
         </li>
         <li>
-          <a href="">
+          <a class="company-logo" href="">
             <img src="https://via.placeholder.com/209x90" width="209" height="90" alt="Логотип Barbershop Borodinsky">
           </a>
         </li>
         <li>
-          <a href="">
+          <a class="company-logo" href="">
             <img src="https://via.placeholder.com/185x52" width="185" height="52" alt="Логотип Pink">
           </a>
         </li>
         <li>
-          <a href="">
+          <a class="company-logo" href="">
             <img src="https://via.placeholder.com/173x84" width="173" height="84" alt="Логотип Mishka">
           </a>
         </li>
       </ul>
     </section>
   </main>
-  <footer>
-    <h2>Контактная информация</h2>
+  <footer class="main-header">
+    <h2 class="hidden-title">Контактная информация</h2>
     <img src="https://via.placeholder.com/1440x416" width="1440" height="416" alt="Изображение карты">
-    <div>
-      <h3>Nerds design studio</h3>
-      <address>
+    <div class="contacts">
+      <h3 class="name-nerds">Nerds design studio</h3>
+      <address class="address-nerds">
         191186, Санкт-Петербург,
         ул. Б. Конюшенная, д. 19/8
       </address>
       <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-      <a href="">Напишите нам</a>
+      <a class="button-contacts" href="">Напишите нам</a>
     </div>
-    <section>
-      <h3>Давайте дружить, это выгодно!</h3>
-      <ul>
-        <li>
-          <a href="#">Вконтакте</a>
+    <section class="social">
+      <h3 class="social-slogan">Давайте дружить, это выгодно!</h3>
+      <ul class="social-list">
+        <li class="social-item">
+          <a class="social-button" href="#">Вконтакте</a>
         </li>
         <li>
-          <a href="#">Фейсбук</a>
+          <a class="social-button" href="#">Фейсбук</a>
         </li>
         <li>
-          <a href="#">Инстаграм</a>
+          <a class="social-button" href="#">Инстаграм</a>
         </li>
       </ul>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <p class="promo-text">Скидка 10% для друзей из социальных сетей.</p>
     </section>
   </footer>
+  <section class="popup-sending">
+    <h2 class="title-sending">
+      Напишите нам
+    </h2>
+    <p class="input-name">Ваше имя</p>
+    <!-- форма имени -->
+    <p class="input-email">Ваш email</p>
+    <!-- форма email -->
+    <p class="text-of-letter">Текст письма</p>
+    <!-- форма письма -->
+    <a class="send-button" href="">Отправить</a> 
+    <a class="popup-close-button" href="">Закрыть</a>
+  </section>
 </body>
 
 </html>
