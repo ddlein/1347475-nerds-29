@@ -1,0 +1,233 @@
+/* Variables */
+
+:root {
+  --basic-red: #FB565A;
+  --basic-darker-red: #E74246;
+  --basic-extra-red: #D7373B;
+  --basic-white: #FFFFFF;
+  --basic-black: #000000;
+  --basic-green: #00CA74;
+  --basic-darker-green: #00BC6C;
+  --basic-extra-green: #00AA62;
+  --basic-yellow: #EFC84A;
+  --basic-darker-yellow: #EAB534;
+  --basic-extra-yellow: #E5A722;
+  --social-button: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+  --social-button-hover: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+  --social-button-click: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+  --social-button-click-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  --basic-grey: #EEEEEE;
+  --basic-darker-grey: #DFDFDF;
+  --basic-extra-gray: #D5D5D5;
+  --basic-extra-gray-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  --basic-light-grey: #D7DCDE;
+  --basic-lighter-grey: #444444;
+  --window-rest: #4D4D4D;
+  --window-rest-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Global */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Header */
+
+.main-nav {
+  text-transform: uppercase;
+}
+
+.site-nav {
+  list-style: none;
+}
+
+.site-nav-button a, .basket {
+  color: inherit;
+}
+
+/* Main */
+
+.top-block {
+  background-color: var(--basic-grey);
+  list-style: none;
+}
+
+.feature-title {
+  /* TODO скачать доп жирность шрифта */
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+/* TODO почему не задается фоновая картинка в li???Надо через div???? */
+
+.first-slide {
+  background-image: url("img/nerds-index-slide1_svg.svg");
+  display: block;
+}
+
+.feature-button {
+  color: var(--basic-white);
+  display: block;
+  border-radius: 3px;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  width: 240px;
+}
+
+/* Making-order */
+
+.order-list {
+  list-style: none;
+}
+
+.order-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.order-button {
+  display: block;
+  width: 160px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-align: center;
+  padding: 15px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/* About us */
+
+.about-slogan {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.about-order, .why-we {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-order-list, .why-we-list {
+  list-style: none;
+}
+
+.about-percents {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+}
+
+.about-percents-explanation {
+  line-height: 18px;
+}
+
+/* Company */
+
+.company-list {
+  list-style: none;
+}
+
+/* Contacts */
+
+.name-nerds {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.address-nerds {
+  line-height: 18px;
+  font-style: normal;
+}
+
+.phone-number {
+  color: var(--basic-black);
+}
+
+.button-contacts {
+  display: block;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  text-align: center;
+  width: 219px;
+  padding: 15px;
+}
+
+/* Social */
+
+.social-list {
+  list-style: none;
+}
+
+.social-sloagn {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.social-button {
+  color: var(--basic-black);
+}
+
+.promo-text {
+  line-height: 22px;
+}
+
+/* Popup */
+
+.title-sending {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+}
+
+.input {
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.send-button {
+  display: block;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  border-radius: 3px;
+  width: 259px;
+  padding: 15px;
+  text-align: center;
+}

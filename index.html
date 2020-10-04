@@ -4,14 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
-  TODO добавить шрифты и стили и уточнить очередность
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
-  <header class="main-header">
+  <header class="main-header top-block">
     <nav class="main-nav">
       <a class="main-header-logo">
-        <img src="https://via.placeholder.com/160x65" width="160" height="65" alt="Логотип сайта Нердс">
+        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип сайта Нердс">
       </a>
       <ul class="site-nav">
         <li class="site-nav-button"><a href="">Студия</a></li>
@@ -26,8 +28,8 @@
     <h1 class="main-title hidden-title">Интернет магазин «Nerds»</h1>
     <section class="features">
       <h2 class="hidden-title">Преимущества</h2>
-      <ul class="features-slider">
-        <li class="feature-item">
+      <ul class="features-slider top-block">
+        <li class="feature-item first-slide">
           <h3 class="feature-title">
             Долго, дорого, <br>
             скрупулезно
@@ -38,7 +40,7 @@
           </p>
           <a class="feature-button" href="">Узнать больше</a>
         </li>
-        <li class="feature-item">
+        <li class="feature-item second-slide">
           <h3 class="feature-title">
             Любим математику<br>
             как никто другой
@@ -49,7 +51,7 @@
           </p>
           <a class="feature-button" href="">Узнать больше</a>
         </li>
-        <li class="feature-item">
+        <li class="feature-item  third-slide">
           <h3 class="feature-title">
             Только ночь,<br>
             только хардкор
@@ -58,7 +60,7 @@
             Работать днем, как все? Мы против этого.<br>
             Ближе к полуночи работа только начинается
           </p>
-          <a class="feature-button" href="">узнать больше</a>
+          <a class="feature-button" href="">Узнать больше</a>
         </li>
       </ul>
     </section>
@@ -66,7 +68,7 @@
       <h2 class="hidden-title">Предложения услуг</h2>
       <ul class="order-list">
         <li class="order-item">
-          <img src="https://via.placeholder.com/300x146" width="300" height="146" alt="Веб-сайт">
+          <img src="img/illustration-1.png" width="300" height="146" alt="Веб-сайт">
           <h3 class="order-title">Веб-сайты</h4>
             <p class="oreder-subtitle">
               Мир никогда не будет прежним<br>
@@ -75,7 +77,7 @@
             <a class="order-button" href="">Заказать</a>
         </li>
         <li>
-          <img src="https://via.placeholder.com/300x146" width="300" height="146" alt="Приложение на iOS и Android">
+          <img src="img/illustration-2.png" width="300" height="146" alt="Приложение на iOS и Android">
           <h3 class="order-title">Приложения</h4>
             <p class="order-subtitle">
               Покорите топ-10 приложений в<br>
@@ -84,7 +86,7 @@
             <a class="order-button" class="order-button" href="">Заказать</a>
         </li>
         <li>
-          <img src="https://via.placeholder.com/300x146" width="300" height="146" alt="Веб-сайт">
+          <img src="img/illustration-3.png" width="300" height="146" alt="Веб-сайт">
           <h3 class="order-title">Презентации</h4>
             <p class="order-subtitle">
               Вы даже не подозреваете,<br>
@@ -94,6 +96,8 @@
         </li>
       </ul>
     </section>
+
+    <!-- TODO полоску сделать через div, ей задать ширину и фоновый цвет -->
     <section class="about">
       <h2 class="hidden-title">О нас</h2>
       <p class="about-slogan">
@@ -110,9 +114,9 @@
         <li class="about-order-item">Мобильных приложений для iOS и Android</li>
         <li class="about-order-item">Слайдшоу и видео для корпоративных презентаций</li>
       </ul>
-      <img src="https://via.placeholder.com/360x208" width="360" height="208" alt="Логотип Нердс">
-      <p class="">С 2004 года любим точность во всем:</p>
-      <ul>
+      <img src="img/nerds-illustration.png" width="360" height="208" alt="Логотип Нердс">
+      <p class="why-we">С 2004 года любим точность во всем:</p>
+      <ul class="why-we-list">
         <li>
           <span class="about-percents">146%</span>
           <p class="about-percents-explanation">
@@ -141,22 +145,22 @@
       <ul class="company-list">
         <li class="company-item">
           <a class="company-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="https://via.placeholder.com/199x67" width="199" height="67" alt="Логотип HTML Academy">
+            <img src="img/logo_1.svg" width="199" height="67" alt="Логотип HTML Academy">
           </a>
         </li>
         <li>
           <a class="company-logo" href="">
-            <img src="https://via.placeholder.com/209x90" width="209" height="90" alt="Логотип Barbershop Borodinsky">
+            <img src="img/logo_2.svg" width="209" height="90" alt="Логотип Barbershop Borodinsky">
           </a>
         </li>
         <li>
           <a class="company-logo" href="">
-            <img src="https://via.placeholder.com/185x52" width="185" height="52" alt="Логотип Pink">
+            <img src="img/logo_3.svg" width="185" height="52" alt="Логотип Pink">
           </a>
         </li>
         <li>
           <a class="company-logo" href="">
-            <img src="https://via.placeholder.com/173x84" width="173" height="84" alt="Логотип Mishka">
+            <img src="img/logo_4.svg" width="173" height="84" alt="Логотип Mishka">
           </a>
         </li>
       </ul>
@@ -168,10 +172,10 @@
     <div class="contacts">
       <h3 class="name-nerds">Nerds design studio</h3>
       <address class="address-nerds">
-        191186, Санкт-Петербург,
+        191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8
       </address>
-      <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+      <a class="phone-number" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
       <a class="button-contacts" href="">Напишите нам</a>
     </div>
     <section class="social">
@@ -194,13 +198,13 @@
     <h2 class="title-sending">
       Напишите нам
     </h2>
-    <p class="input-name">Ваше имя</p>
+    <p class="input-name input">Ваше имя</p>
     <!-- форма имени -->
-    <p class="input-email">Ваш email</p>
+    <p class="input-email input">Ваш email</p>
     <!-- форма email -->
-    <p class="text-of-letter">Текст письма</p>
+    <p class="text-of-letter input">Текст письма</p>
     <!-- форма письма -->
-    <a class="send-button" href="">Отправить</a> 
+    <a class="send-button" href="">Отправить</a>
     <a class="popup-close-button" href="">Закрыть</a>
   </section>
 </body>
