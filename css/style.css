@@ -1,28 +1,28 @@
 /* Variables */
 
 :root {
-  --basic-red: #FB565A;
-  --basic-darker-red: #E74246;
-  --basic-extra-red: #D7373B;
-  --basic-white: #FFFFFF;
+  --basic-red: #fb565a;
+  --basic-darker-red: #e74246;
+  --basic-extra-red: #d7373b;
+  --basic-white: #ffffff;
   --basic-black: #000000;
-  --basic-green: #00CA74;
-  --basic-darker-green: #00BC6C;
-  --basic-extra-green: #00AA62;
-  --basic-yellow: #EFC84A;
-  --basic-darker-yellow: #EAB534;
-  --basic-extra-yellow: #E5A722;
-  --social-button: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
-  --social-button-hover: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
-  --social-button-click: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+  --basic-green: #00ca74;
+  --basic-darker-green: #00bc6c;
+  --basic-extra-green: #00aa62;
+  --basic-yellow: #efc84a;
+  --basic-darker-yellow: #eab534;
+  --basic-extra-yellow: #e5a722;
+  --social-button: linear-gradient(0deg, #e1e1e1, #e1e1e1), #ffffff;
+  --social-button-hover: linear-gradient(0deg, #d7373b, #d7373b), #ffffff;
+  --social-button-click: linear-gradient(0deg, #d7373b, #d7373b), #ffffff;
   --social-button-click-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  --basic-grey: #EEEEEE;
-  --basic-darker-grey: #DFDFDF;
-  --basic-extra-gray: #D5D5D5;
+  --basic-grey: #eeeeee;
+  --basic-darker-grey: #dfdfdf;
+  --basic-extra-gray: #d5d5d5;
   --basic-extra-gray-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-  --basic-light-grey: #D7DCDE;
+  --basic-light-grey: #d7dcde;
   --basic-lighter-grey: #444444;
-  --window-rest: #4D4D4D;
+  --window-rest: #4d4d4d;
   --window-rest-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -31,7 +31,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -47,8 +47,7 @@ img {
   height: auto;
 }
 
-
-.hidden-title {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -69,7 +68,8 @@ img {
   list-style: none;
 }
 
-.site-nav-button a, .basket {
+.site-nav-button a,
+.basket {
   color: inherit;
 }
 
@@ -78,6 +78,7 @@ img {
 .top-block {
   background-color: var(--basic-grey);
   list-style: none;
+  margin-top: 0;
 }
 
 .feature-title {
@@ -85,12 +86,13 @@ img {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
+  margin-top: 0;
 }
 
 /* TODO почему не задается фоновая картинка в li???Надо через div???? */
 
 .first-slide {
-  background-image: url("img/nerds-index-slide1_svg.svg");
+  background-image: url("../img/nerds-index-slide1_svg.svg");
   display: block;
 }
 
@@ -105,19 +107,20 @@ img {
   width: 240px;
 }
 
-/* Making-order */
+/* Making-offer */
 
-.order-list {
+.offer-list {
   list-style: none;
 }
 
-.order-title {
+.offer-title {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 24px;
+  line-height: 30px;
 }
 
-.order-button {
+.offer-button {
   display: block;
   width: 160px;
   text-transform: uppercase;
@@ -136,12 +139,14 @@ img {
   line-height: 45px;
 }
 
-.about-order, .why-we {
+.about-offer,
+.why-we {
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.about-order-list, .why-we-list {
+.about-offer-list,
+.why-we-list {
   list-style: none;
 }
 
@@ -194,7 +199,7 @@ img {
   list-style: none;
 }
 
-.social-sloagn {
+.social-slogan {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
