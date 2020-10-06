@@ -24,6 +24,7 @@
   --basic-lighter-grey: #444444;
   --window-rest: #4d4d4d;
   --window-rest-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --modal-subtitle: #666666;
 }
 
 /* Global */
@@ -68,7 +69,7 @@ img {
   list-style: none;
 }
 
-.site-nav-button a,
+.site-nav-link a,
 .basket {
   color: inherit;
 }
@@ -92,7 +93,6 @@ img {
 /* TODO почему не задается фоновая картинка в li???Надо через div???? */
 
 .first-slide {
-  background-image: url("../img/nerds-index-slide1_svg.svg");
   display: block;
 }
 
@@ -235,4 +235,54 @@ img {
   width: 259px;
   padding: 15px;
   text-align: center;
+}
+
+/* Catalog */
+
+.main-title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  display: block;
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 100px;
+  background-color: var(--basic-grey);
+}
+
+.catalog-list {
+  list-style: none
+}
+
+.modal-title {
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.modal-subtitle {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--modal-subtitle);
+}
+
+.modal-button {
+  display: block;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  width: 200px;
+  text-align: center;
+  border-radius: 3px;
+  padding: 15px;
+  line-height: 18px;
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-link {
+  color: var(--basic-black);
 }
