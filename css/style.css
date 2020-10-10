@@ -90,7 +90,6 @@ img {
   margin-top: 0;
 }
 
-/* TODO почему не задается фоновая картинка в li???Надо через div???? */
 
 .first-slide {
   display: block;
@@ -257,6 +256,7 @@ img {
 .modal-title {
   font-weight: 700;
   line-height: 30px;
+  font-size: 18px;
   text-transform: uppercase;
   color: var(--basic-black);
 }
