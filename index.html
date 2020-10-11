@@ -28,41 +28,43 @@
     <h1 class="visually-hidden">Интернет магазин «Nerds»</h1>
     <section class="features">
       <h2 class="visually-hidden">Преимущества</h2>
-      <ul class="features-slider top-block">
-        <li class="feature-item first-slide">
-          <h3 class="feature-title">
-            Долго, дорого,<br>
-            скрупулезно
-          </h3>
-          <p class="feature-subtitle">
-            Математически выверенный дизайн<br>
-            для вашего сайта или мобильного приложения
-          </p>
-          <a class="feature-button" href="">Узнать больше</a>
-        </li>
-        <li class="feature-item second-slide">
-          <h3 class="feature-title">
-            Любим математику<br>
-            как никто другой
-          </h3>
-          <p class="feature-subtitle">
-            Никакого креатива, только математические формулы<br>
-            для расчета идеальных пропорций
-          </p>
-          <a class="feature-button" href="">Узнать больше</a>
-        </li>
-        <li class="feature-item third-slide">
-          <h3 class="feature-title">
-            Только ночь,<br>
-            только хардкор
-          </h3>
-          <p class="feature-subtitle">
-            Работать днем, как все? Мы против этого.<br>
-            Ближе к полуночи работа только начинается
-          </p>
-          <a class="feature-button" href="">Узнать больше</a>
-        </li>
-      </ul>
+      <div class="feature-slider-wrapper">
+        <ul class="features-slider top-block">
+          <li class="feature-item first-slide">
+            <h3 class="feature-title">
+              Долго, дорого,<br>
+              скрупулезно
+            </h3>
+            <p class="feature-subtitle">
+              Математически выверенный дизайн<br>
+              для вашего сайта или мобильного приложения
+            </p>
+            <a class="feature-button" href="">Узнать больше</a>
+          </li>
+          <li class="feature-item second-slide">
+            <h3 class="feature-title">
+              Любим математику<br>
+              как никто другой
+            </h3>
+            <p class="feature-subtitle">
+              Никакого креатива, только математические формулы<br>
+              для расчета идеальных пропорций
+            </p>
+            <a class="feature-button" href="">Узнать больше</a>
+          </li>
+          <li class="feature-item third-slide">
+            <h3 class="feature-title">
+              Только ночь,<br>
+              только хардкор
+            </h3>
+            <p class="feature-subtitle">
+              Работать днем, как все? Мы против этого.<br>
+              Ближе к полуночи работа только начинается
+            </p>
+            <a class="feature-button" href="">Узнать больше</a>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="offer">
       <h2 class="visually-hidden">Предложения услуг</h2>
@@ -83,6 +85,7 @@
             Покорите топ-10 приложений в<br>
             AppStore и Google Play
           </p>
+          <!-- TODO исправить цвет кнопки -->
           <a class="offer-button" href="">Заказать</a>
         </li>
         <li>
@@ -92,60 +95,68 @@
             Вы даже не подозреваете,<br>
             насколько вы изумительны!
           </p>
+          <!-- TODO исправить цвет кнопки -->
           <a class="offer-button" href="">Заказать</a>
         </li>
       </ul>
     </section>
-
-    <!-- TODO полоску сделать через div, ей задать ширину и фоновый цвет -->
     <section class="about">
+      <div class="line"></div>
       <h2 class="visually-hidden">О нас</h2>
-      <p class="about-slogan">
-        Мы - маленькая, но гордая<br>
-        дизайн-студия из Краснодара.
-      </p>
-      <p class="about-text">
-        Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
-        превыше креатива. Работаем не покладая рук, как роботы.
-      </p>
-      <p class="about-offer">Выполняем заказы на разработку:</p>
-      <ul class="about-offer-list">
-        <li class="about-offer-item">Веб-сайтов любой сложности</li>
-        <li class="about-offer-item">
-          Мобильных приложений для iOS и Android
-        </li>
-        <li class="about-offer-item">
-          Слайдшоу и видео для корпоративных презентаций
-        </li>
-      </ul>
-      <img src="img/about-offer-nerds-logo.png" width="360" height="208" alt="Логотип Нердс">
-      <p class="why-we">С 2004 года любим точность во всем:</p>
-      <ul class="why-we-list">
-        <li>
-          <span class="about-percents">146%</span>
-          <p class="about-percents-explanation">
-            Уровень<br>
-            самоотдачи
+      <div class="about-all-wrapper">
+        <div class="about-wrapper">
+          <p class="about-slogan">
+            Мы - маленькая, но гордая<br>
+            дизайн-студия из Краснодара.
           </p>
-        </li>
-        <li>
-          <span class="about-percents">100%</span>
-          <p class="about-percents-explanation">
-            Соблюдение<br>
-            сроков
+          <p class="about-text">
+            Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
+            превыше креатива. Работаем не покладая рук, как роботы.
           </p>
-        </li>
-        <li>
-          <span class="about-percents">50%</span>
-          <p class="about-percents-explanation">
-            Минимальная<br>
-            предоплата
-          </p>
-        </li>
-      </ul>
+          <p class="about-offer">Выполняем заказы на разработку:</p>
+          <ul class="about-offer-list">
+            <li class="about-offer-item">Веб-сайтов любой сложности</li>
+            <li class="about-offer-item">
+              Мобильных приложений для iOS и Android
+            </li>
+            <li class="about-offer-item">
+              Слайдшоу и видео для корпоративных презентаций
+            </li>
+          </ul>
+        </div>
+        <div class="why-we-wrapper"><img src="img/about-offer-nerds-logo.png" width="360" height="208"
+            alt="Логотип Нердс">
+          <p class="why-we">С 2004 года любим точность во всем:</p>
+          <ul class="why-we-list">
+            <li>
+              <span class="about-percents">146%</span>
+              <p class="about-percents-explanation">
+                Уровень<br>
+                самоотдачи
+              </p>
+            </li>
+            <li>
+              <span class="about-percents">100%</span>
+              <p class="about-percents-explanation">
+                Соблюдение<br>
+                сроков
+              </p>
+            </li>
+            <li>
+              <span class="about-percents">50%</span>
+              <p class="about-percents-explanation">
+                Минимальная<br>
+                предоплата
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </section>
     <section class="company">
       <h2 class="visually-hidden">Компании</h2>
+      <div class="line"></div>
       <ul class="company-list">
         <li class="company-item">
           <a class="company-logo" href="https://htmlacademy.ru/intensive/htmlcss">
@@ -168,11 +179,15 @@
           </a>
         </li>
       </ul>
+      <div class="line"></div>
     </section>
   </main>
   <footer class="main-footer">
     <h2 class="visually-hidden">Контактная информация</h2>
-    <img src="https://via.placeholder.com/1440x416" width="1440" height="416" alt="Изображение карты">
+    <iframe class="maps"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65202987874744!2d30.32330650958949!3d59.93864459953058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1602443873777!5m2!1sru!2sru"
+      width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+      tabindex="0"></iframe>
     <div class="contacts">
       <h3 class="name-nerds">Nerds design studio</h3>
       <address class="address-nerds">
@@ -198,7 +213,7 @@
       <p class="promo-text">Скидка 10% для друзей из социальных сетей.</p>
     </section>
   </footer>
-  <section class="popup-sending">
+  <section class="popup-sending visually-hidden">
     <h2 class="title-sending">Напишите нам</h2>
     <p class="input-name input">Ваше имя</p>
     <!-- форма имени -->

@@ -59,14 +59,48 @@ img {
   overflow: hidden;
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  /* outline: 5px solid red;
+  outline-offset: -5px; */
+}
+
+
 /* Header */
 
 .main-nav {
   text-transform: uppercase;
+  display: grid;
+  /* BUG почему картинка при min-content уходит? */
+  grid-template-columns: max-content auto min-content;
+  width: 1160px;
+  margin: 0 auto;
+  /* outline: 4px solid red;
+  outline-offset: -4px; */
 }
 
 .site-nav {
   list-style: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  padding: 0;
+  /* outline: 4px solid green;
+  outline-offset: -4px; */
+}
+
+.basket {
+  justify-self: right;
 }
 
 .site-nav-link a,
@@ -76,23 +110,45 @@ img {
 
 /* Main */
 
+
+
 .top-block {
   background-color: var(--basic-grey);
   list-style: none;
   margin-top: 0;
 }
 
+.feature-slider-wrapper {
+  background-color: var(--basic-grey);
+}
+
+.features-slider {
+  display: grid;
+  /* outline: 4px solid rgb(44, 4, 4); */
+  margin: 0;
+  padding: 0;
+  width: 1157px;
+  justify-self: center;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: grid;
+  /* outline: 1px solid blue; */
+}
+
 .feature-title {
-  /* TODO скачать доп жирность шрифта */
+  /* BUG скачать доп жирность шрифта? */
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-  margin-top: 0;
+  margin-top: 85px;
 }
 
 
 .first-slide {
   display: block;
+
 }
 
 .feature-button {
@@ -104,12 +160,22 @@ img {
   background-color: var(--basic-red);
   text-transform: uppercase;
   width: 240px;
+  margin-bottom: 30px;
 }
 
 /* Making-offer */
 
+
 .offer-list {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 100px;
+  /* outline: 1px solid purple; */
+  justify-content: start;
+  width: 1157px;
   list-style: none;
+  margin: 20px auto;
+  padding: 0;
 }
 
 .offer-title {
@@ -132,6 +198,25 @@ img {
 
 /* About us */
 
+.line {
+  background-color: var(--basic-grey);
+  width: 1158px;
+  height: 1px;
+  margin: auto;
+}
+
+.about-all-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1157px;
+  margin: 0 auto;
+}
+
+.why-we-wrapper {
+  justify-self: end;
+}
+
+
 .about-slogan {
   font-weight: 500;
   font-size: 45px;
@@ -144,9 +229,18 @@ img {
   text-transform: uppercase;
 }
 
-.about-offer-list,
+.about-offer-list {
+  list-style: none;
+}
+
 .why-we-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  outline: 1px solid black;
+  justify-content: start;
+  margin: 0;
+  padding: 0;
 }
 
 .about-percents {
@@ -163,9 +257,18 @@ img {
 
 .company-list {
   list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 1157px;
+
 }
 
 /* Contacts */
+
+.maps {
+  width: 100%;
+}
+
 
 .name-nerds {
   font-weight: 700;
@@ -194,14 +297,27 @@ img {
 
 /* Social */
 
+.social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* outline: 1px solid green; */
+  width: 1157px;
+  margin: 0 auto;
+}
+
+
 .social-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  ;
 }
 
 .social-slogan {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+  order: 1;
 }
 
 .social-button {
@@ -210,6 +326,8 @@ img {
 
 .promo-text {
   line-height: 22px;
+  order: 1;
+  grid-column-start: 2;
 }
 
 /* Popup */
@@ -277,6 +395,7 @@ img {
   border-radius: 3px;
   padding: 15px;
   line-height: 18px;
+  border: 0;
 }
 
 .pagination-list {
