@@ -258,7 +258,9 @@ img {
 .map-img {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
+  max-height: 416px;
   z-index: -2;
 }
 
