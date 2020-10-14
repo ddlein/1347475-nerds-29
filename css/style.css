@@ -255,16 +255,19 @@ img {
   justify-content: space-around;
 }
 
-/* Contacts */
+/* Footer */
+
+.main-footer {
+  position: relative;
+}
 
 .contacts {
   background-color: white;
-  display: inline-block;
   outline: 1px solid;
   width: 319px;  
-  position: relative;
+  position: absolute;
   padding: 0;
-  top: 300px;
+  top: 60px;
   left: 60px;
   z-index: 2;
 }
@@ -279,7 +282,6 @@ img {
   width: 100%;
   border: 0;
   z-index: 1;
-  position: absolute;
   top: 0;
   left: 0;
 }
