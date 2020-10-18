@@ -21,7 +21,7 @@
         <li class="site-nav-link site-nav-shop"><a href="catalog.html">Магазин</a></li>
         <li class="site-nav-link site-nav-contacts"><a href="">Контакты</a></li>
       </ul>
-      <a class="basket" href="">Корзина</a>
+      <a class="site-nav-link basket" href="">Корзина</a>
     </nav>
   </header>
   <main class="container">
@@ -64,7 +64,8 @@
         </li>
       </ul>
       <div class="slider-controls">
-        <!-- TODO сделать активное кольцо слайдера -->
+        <!-- BUG сделать активное кольцо слайдера через еще один div -->
+        <!-- BUG центрировать переключение слайдера как -->
         <button class="current" type="button" aria-label="Первый слайд"></button>
         <button type="button" aria-label="Второй слайд"></button>
         <button type="button" aria-label="Третий слайд"></button>
@@ -127,21 +128,21 @@
           <p class="why-we">С 2004 года любим точность во всем:</p>
           <ul class="why-we-list">
             <li>
-              <span class="about-percents">146<span class="percents">%</span></span></span>
+              <span class="about-percents">146<sup class="percents">%</sup></span>
               <p class="about-percents-explanation">
                 Уровень<br>
                 самоотдачи
               </p>
             </li>
             <li>
-              <span class="about-percents">100<span class="percents">%</span></span>
+              <span class="about-percents">100<sup class="percents">%</sup></span>
               <p class="about-percents-explanation">
                 Соблюдение<br>
                 сроков
               </p>
             </li>
             <li>
-              <span class="about-percents">50<span class="percents">%</span></span>
+              <span class="about-percents">50<sup class="percents">%</sup></span>
               <p class="about-percents-explanation">
                 Минимальная<br>
                 предоплата
@@ -163,7 +164,8 @@
         </li>
         <li>
           <a class="company-logo" href="">
-            <img class="barbershop-logo" src="img/logo-borodinsky.svg" width="209" height="90" alt="Логотип Barbershop Borodinsky">
+            <img class="barbershop-logo" src="img/logo-borodinsky.svg" width="209" height="90"
+              alt="Логотип Barbershop Borodinsky">
           </a>
         </li>
         <li>
@@ -201,13 +203,20 @@
       <h3 class="social-slogan">Давайте дружить, это выгодно!</h3>
       <ul class="social-list">
         <li class="social-item">
-          <a class="social-button" href="#">Вконтакте</a>
+          <!-- BUG иконка при нажатии -->
+          <a class="social-button" href="#">
+            <img class="vk-logo" src="img/vk-icon.svg" width="26" height="15" alt="Логотип ВК">
+          </a>
         </li>
-        <li>
-          <a class="social-button" href="#">Фейсбук</a>
+        <li class="social-item">
+          <a class="social-button" href="#">
+            <img class="fb-logo" src="img/fb-icon.svg" width="12" height="22" alt="Логотип FB">
+          </a>
         </li>
-        <li>
-          <a class="social-button" href="#">Инстаграм</a>
+        <li class="social-item">
+          <a class="social-button" href="#">
+            <img class="inst-logo" src="img/insta-icon.svg" width="21" height="21" alt="Логотип Instagram">
+          </a>
         </li>
       </ul>
       <p class="promo-text">Скидка 10% для друзей из социальных сетей.</p>

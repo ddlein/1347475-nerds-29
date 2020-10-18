@@ -4,7 +4,8 @@
   --basic-red: #fb565a;
   --basic-darker-red: #e74246;
   --basic-extra-red: #d7373b;
-  --basic-white: #ffffff;
+  --basic-white: #FFFFFF;
+  --basic-white-click: rgb(100%, 100%, 100%, 0.3);;
   --basic-black: #000000;
   --basic-green: #00ca74;
   --basic-darker-green: #00bc6c;
@@ -13,13 +14,11 @@
   --basic-darker-yellow: #eab534;
   --basic-extra-yellow: #e5a722;
   --social-button: linear-gradient(0deg, #e1e1e1, #e1e1e1), #ffffff;
-  --social-button-hover: linear-gradient(0deg, #d7373b, #d7373b), #ffffff;
-  --social-button-click: linear-gradient(0deg, #d7373b, #d7373b), #ffffff;
-  --social-button-click-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  --button-click: linear-gradient(0deg, #d7373b, #d7373b), #ffffff;
+  --click-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   --basic-grey: #eeeeee;
   --basic-darker-grey: #dfdfdf;
   --basic-extra-gray: #d5d5d5;
-  --basic-extra-gray-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   --basic-light-grey: #d7dcde;
   --basic-lighter-grey: #444444;
   --window-rest: #4d4d4d;
@@ -76,8 +75,6 @@ img {
 
 .main-nav {
   text-transform: uppercase;
-  /* display: grid; */
-  /* grid-template-columns: min-content auto min-content; */
   width: 1160px;
   margin: 0 auto;
   margin-top: 48px;
@@ -87,8 +84,16 @@ img {
 }
 
 .main-header-logo {
+  /* display: block; */
   width: 160px;
+  /* background-image: url(../img/nerds-logo.svg);
+  background-repeat: no-repeat; */
 }
+
+/* .main-header-logo:active {
+  background-image: url(../img/nerds-logo-active.svg);
+  background-repeat: no-repeat;
+} */
 
 .site-nav {
   list-style: none;
@@ -100,12 +105,18 @@ img {
 }
 
 
-.site-nav-link {
-  margin-right: 20px;
+
+.site-nav .site-nav-link:nth-child(-n+3) {
+  padding-right: 45px;
 }
 
-.site-nav>.site-nav-link:nth-child(-n+3) {
-  padding-right: 25px;
+.site-nav-link:hover {
+  color: var(--basic-red);
+}
+
+.site-nav-link:active {
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
 
@@ -143,7 +154,6 @@ img {
   z-index: 5;
   display: flex;
   top: 310px;
-  left: 909px;
   justify-content: space-between;
 }
 
@@ -156,9 +166,6 @@ img {
   cursor: pointer;
 }
 
-.slider-controls .current {
-  
-}
 
 /* Main */
 
@@ -223,6 +230,16 @@ img {
   margin-top: 38px
 }
 
+.feature-button:hover {
+  background-color: var(--basic-darker-red);
+}
+
+.feature-button:active {
+  background-color: var(--basic-extra-red);
+  color: var(--basic-white-click);
+  box-shadow: var(--click-shadow);
+}
+
 /* Making-offer */
 
 .offer {
@@ -268,12 +285,42 @@ img {
   background-color: var(--basic-red);
 }
 
+.web-sites:hover {
+  background-color: var(--basic-darker-red);
+}
+
+.web-sites:active {
+  background-color: var(--basic-extra-red);
+  color: var(--basic-white-click);
+  box-shadow: var(--click-shadow);
+}
+
 .apps {
   background-color: var(--basic-green);
 }
 
+.apps:hover {
+  background-color: var(--basic-darker-green);
+}
+
+.apps:active {
+  background-color: var(--basic-extra-green);
+  color: var(--basic-white-click);
+  box-shadow: var(--click-shadow);
+}
+
 .presentation {
   background-color: var(--basic-yellow);
+}
+
+.presentation:hover {
+  background-color: var(--basic-darker-yellow);
+}
+
+.presentation:active {
+  background-color: var(--basic-extra-yellow);
+  color: var(--basic-white-click);
+  box-shadow: var(--click-shadow);
 }
 
 /* About us */
@@ -347,7 +394,7 @@ img {
 .why-we {
   margin-top: 31px;
   margin-left: 17px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .why-we-list {
@@ -495,11 +542,11 @@ img {
 
 .social {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 400px 1fr;
   width: 1160px;
   margin: 0 auto;
   padding-bottom: 60px;
-  margin-top: 50px;
+  margin-top: 68px;
 }
 
 .social-list {
@@ -507,8 +554,12 @@ img {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
+}
+
+.social-item {
+  margin-right: 9px;
 }
 
 .social-slogan {
@@ -516,18 +567,65 @@ img {
   font-size: 36px;
   line-height: 36px;
   order: 1;
-  margin: 10px 0;
+  margin-top: 7px;
+  justify-content: start;
 }
 
 .social-button {
-  color: var(--basic-black);
+  display: inline-block;
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFF;
 }
+
+.social-button:hover {
+  background: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
+}
+
+.social-button:active {
+  box-shadow: var(--click-shadow);
+  /* background-color: var(--basic-extra-red); */
+  background: var(--button-click);
+}
+
+/* BUG как сделать opacity лого соц сетей при наведении на кругляш */
+
+.vk-logo {
+  margin-top: 33px;
+  margin-left: 26px;
+}
+
+.vk-logo:active {
+  opacity: 0.3;
+}
+
+.fb-logo {
+  margin-top: 31px;
+  margin-left: 35px;
+}
+
+.fb-logo:active {
+  opacity: 0.3;
+}
+
+.inst-logo {
+  margin-top: 30px;
+  margin-left: 31px;
+}
+
+.inst-logo:active {
+  opacity: 0.3;
+}
+
+
 
 .promo-text {
   line-height: 22px;
   order: 1;
   grid-column-start: 2;
   margin: 0;
+  margin-top: -29px;
 }
 
 /* Popup */
