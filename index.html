@@ -16,10 +16,10 @@
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип сайта Нердс">
       </a>
       <ul class="site-nav">
-        <li class="site-nav-link"><a href="">Студия</a></li>
-        <li class="site-nav-link"><a href="">Клиенты</a></li>
-        <li class="site-nav-link"><a href="catalog.html">Магазин</a></li>
-        <li class="site-nav-link"><a href="">Контакты</a></li>
+        <li class="site-nav-link site-nav-studio"><a href="">Студия</a></li>
+        <li class="site-nav-link site-nav-clients"><a href="">Клиенты</a></li>
+        <li class="site-nav-link site-nav-shop"><a href="catalog.html">Магазин</a></li>
+        <li class="site-nav-link site-nav-contacts"><a href="">Контакты</a></li>
       </ul>
       <a class="basket" href="">Корзина</a>
     </nav>
@@ -32,7 +32,7 @@
         <li class="feature-item first-slide">
           <h3 class="feature-title">
             Долго, дорого,<br>
-            скрупулезно
+            скрупулезно.
           </h3>
           <p class="feature-subtitle">
             Математически выверенный дизайн<br>
@@ -63,6 +63,12 @@
           <a class="feature-button" href="">Узнать больше</a>
         </li>
       </ul>
+      <div class="slider-controls">
+        <!-- TODO сделать активное кольцо слайдера -->
+        <button class="current" type="button" aria-label="Первый слайд"></button>
+        <button type="button" aria-label="Второй слайд"></button>
+        <button type="button" aria-label="Третий слайд"></button>
+      </div>
     </section>
     <section class="offer">
       <h2 class="visually-hidden">Предложения услуг</h2>
@@ -74,17 +80,16 @@
             Мир никогда не будет прежним<br>
             после того как увидит ваш сайт!
           </p>
-          <a class="offer-button" href="">Заказать</a>
+          <a class="offer-button web-sites" href="">Заказать</a>
         </li>
         <li>
           <img src="img/offer-apps.png" width="300" height="146" alt="Приложение на iOS и Android">
           <h3 class="offer-title">Приложения</h3>
           <p class="offer-subtitle">
-            Покорите топ-10 приложений в<br>
-            AppStore и Google Play
+            Покорите топ-10 приложений<br>
+            в AppStore и Google Play
           </p>
-          <!-- TODO исправить цвет кнопки -->
-          <a class="offer-button" href="">Заказать</a>
+          <a class="offer-button apps" href="">Заказать</a>
         </li>
         <li>
           <img src="img/offer-presentation.png" width="300" height="146" alt="Веб-сайт">
@@ -93,18 +98,17 @@
             Вы даже не подозреваете,<br>
             насколько вы изумительны!
           </p>
-          <!-- TODO исправить цвет кнопки -->
-          <a class="offer-button" href="">Заказать</a>
+          <a class="offer-button presentation" href="">Заказать</a>
         </li>
       </ul>
     </section>
     <section class="about">
-      <div class="line"></div>
+      <div class="line line-first"></div>
       <h2 class="visually-hidden">О нас</h2>
       <div class="about-all-wrapper">
         <div class="about-wrapper">
           <p class="about-slogan">
-            Мы - маленькая, но гордая<br>
+            Мы &mdash; маленькая, но гордая<br>
             дизайн-студия из Краснодара.
           </p>
           <p class="about-text">
@@ -114,12 +118,8 @@
           <p class="about-offer">Выполняем заказы на разработку:</p>
           <ul class="about-offer-list">
             <li class="about-offer-item">Веб-сайтов любой сложности</li>
-            <li class="about-offer-item">
-              Мобильных приложений для iOS и Android
-            </li>
-            <li class="about-offer-item">
-              Слайдшоу и видео для корпоративных презентаций
-            </li>
+            <li class="about-offer-item">Мобильных приложений для iOS и Android</li>
+            <li class="about-offer-item">Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
         </div>
         <div class="why-we-wrapper"><img src="img/about-offer-nerds-logo.png" width="360" height="208"
@@ -127,21 +127,21 @@
           <p class="why-we">С 2004 года любим точность во всем:</p>
           <ul class="why-we-list">
             <li>
-              <span class="about-percents">146%</span>
+              <span class="about-percents">146<span class="percents">%</span></span></span>
               <p class="about-percents-explanation">
                 Уровень<br>
                 самоотдачи
               </p>
             </li>
             <li>
-              <span class="about-percents">100%</span>
+              <span class="about-percents">100<span class="percents">%</span></span>
               <p class="about-percents-explanation">
                 Соблюдение<br>
                 сроков
               </p>
             </li>
             <li>
-              <span class="about-percents">50%</span>
+              <span class="about-percents">50<span class="percents">%</span></span>
               <p class="about-percents-explanation">
                 Минимальная<br>
                 предоплата
@@ -154,36 +154,36 @@
     </section>
     <section class="company">
       <h2 class="visually-hidden">Компании</h2>
-      <div class="line"></div>
+      <div class="line line-second"></div>
       <ul class="company-list">
         <li class="company-item">
           <a class="company-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo-html-academy.svg" width="199" height="67" alt="Логотип HTML Academy">
+            <img class="html-logo" src="img/logo-html-academy.svg" width="199" height="67" alt="Логотип HTML Academy">
           </a>
         </li>
         <li>
           <a class="company-logo" href="">
-            <img src="img/logo-borodinsky.svg" width="209" height="90" alt="Логотип Barbershop Borodinsky">
+            <img class="barbershop-logo" src="img/logo-borodinsky.svg" width="209" height="90" alt="Логотип Barbershop Borodinsky">
           </a>
         </li>
         <li>
           <a class="company-logo" href="">
-            <img src="img/logo-pink.svg" width="185" height="52" alt="Логотип Pink">
+            <img class="pink-logo" src="img/logo-pink.svg" width="185" height="52" alt="Логотип Pink">
           </a>
         </li>
         <li>
           <a class="company-logo" href="">
-            <img src="img/logo-mishka.svg" width="173" height="84" alt="Логотип Mishka">
+            <img class="mishka-logo" src="img/logo-mishka.svg" width="173" height="84" alt="Логотип Mishka">
           </a>
         </li>
       </ul>
-      <div class="line"></div>
+      <div class="line line-third"></div>
     </section>
   </main>
   <footer class="main-footer">
     <h2 class="visually-hidden">Контактная информация</h2>
     <div class="contacts">
-      <h3 class="name-nerds">Nerds design studio</h3>
+      <h3 class="name-nerds">Nёrds design studio</h3>
       <address class="address-nerds">
         191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8
