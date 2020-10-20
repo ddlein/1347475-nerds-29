@@ -58,6 +58,50 @@ img {
   overflow: hidden;
 }
 
+/* Button colors */
+
+.btn--red {
+  background-color: var(--basic-red);
+}
+
+.btn--red:hover {
+  background-color: var(--basic-darker-red);
+}
+
+.btn--red:active {
+  background-color: var(--basic-extra-red);
+  color: var(--basic-white-click);
+  box-shadow: var(--click-shadow);
+}
+
+.btn--green {
+  background-color: var(--basic-green);
+}
+
+.btn--green:hover {
+  background-color: var(--basic-darker-green);
+}
+
+.btn--green:active {
+  background-color: var(--basic-extra-green);
+  color: var(--basic-white-click);
+  box-shadow: var(--click-shadow);
+}
+
+.btn--yellow {
+  background-color: var(--basic-yellow);
+}
+
+.btn--yellow:hover {
+  background-color: var(--basic-darker-yellow);
+}
+
+.btn--yellow:active {
+  background-color: var(--basic-extra-yellow);
+  color: var(--basic-white-click);
+  box-shadow: var(--click-shadow);
+}
+
 /* Grid */
 
 .page {
@@ -105,7 +149,7 @@ img {
 
 
 .site-nav .site-nav-link:nth-child(-n+3) {
-  padding-right: 45px;
+  margin-right: 45px;
 }
 
 .site-nav-link:hover {
@@ -152,7 +196,6 @@ img {
   z-index: 5;
   display: flex;
   justify-content: space-between;
-  position: absolute;
   left: 50%;
   bottom: 97px;
   margin-left: -44px;
@@ -164,8 +207,8 @@ img {
   height: 18px;
   background-color: white;
   border-radius: 50%;
-  border: 2px solid #ffffff;
   cursor: pointer;
+  border: none;
 }
 
 
@@ -231,7 +274,6 @@ img {
   border-radius: 3px;
   line-height: 18px;
   text-align: center;
-  background-color: var(--basic-red);
   text-transform: uppercase;
   width: 240px;
   margin-bottom: 30px;
@@ -253,7 +295,6 @@ img {
 
 .offer {
   margin-top: 80px;
-  margin-left: -3px;
 }
 
 .offer-list {
@@ -261,7 +302,7 @@ img {
   grid-template-columns: 300px 300px 300px;
   column-gap: 100px;
   justify-content: start;
-  width: 1157px;
+  width: 1160px;
   list-style: none;
   margin: 0 auto;
   padding: 0 20px;
@@ -290,47 +331,6 @@ img {
 
 }
 
-.web-sites {
-  background-color: var(--basic-red);
-}
-
-.web-sites:hover {
-  background-color: var(--basic-darker-red);
-}
-
-.web-sites:active {
-  background-color: var(--basic-extra-red);
-  color: var(--basic-white-click);
-  box-shadow: var(--click-shadow);
-}
-
-.apps {
-  background-color: var(--basic-green);
-}
-
-.apps:hover {
-  background-color: var(--basic-darker-green);
-}
-
-.apps:active {
-  background-color: var(--basic-extra-green);
-  color: var(--basic-white-click);
-  box-shadow: var(--click-shadow);
-}
-
-.presentation {
-  background-color: var(--basic-yellow);
-}
-
-.presentation:hover {
-  background-color: var(--basic-darker-yellow);
-}
-
-.presentation:active {
-  background-color: var(--basic-extra-yellow);
-  color: var(--basic-white-click);
-  box-shadow: var(--click-shadow);
-}
 
 /* About us */
 
@@ -344,10 +344,6 @@ img {
   margin: 80px auto 40px auto;
 }
 
-.line-first {
-  margin-top: 80px;
-  margin-bottom: 39px;
-}
 
 
 .about-all-wrapper {
@@ -438,9 +434,6 @@ img {
 
 /* Company */
 
-.line-second {
-  margin-top: 47px;
-}
 
 .company::before {
   content: "";
@@ -461,6 +454,19 @@ img {
   margin: 0 auto;
   margin-bottom: 80px;
 }
+
+.img-logo {
+  opacity: 0.2;
+}
+
+.img-logo:hover {
+  opacity: 1;
+}
+
+.img-logo:active {
+  opacity: 0.1;
+}
+
 
 .company-list {
   list-style: none;
@@ -511,7 +517,8 @@ img {
   position: absolute;
   padding: 0;
   top: 55px;
-  left: 140px;
+  left: 50%;
+  margin-left: -580px;
   z-index: 2;
 }
 
