@@ -24,6 +24,7 @@
   --window-rest: #4d4d4d;
   --window-rest-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --modal-subtitle: #666666;
+  --radio-check-btn-color: #283136;
 }
 
 /* Global */
@@ -64,7 +65,8 @@ img {
   background-color: var(--basic-red);
 }
 
-.btn--red:hover {
+.btn--red:hover,
+.btn--red:focus {
   background-color: var(--basic-darker-red);
 }
 
@@ -78,7 +80,8 @@ img {
   background-color: var(--basic-green);
 }
 
-.btn--green:hover {
+.btn--green:hover,
+.btn--green:focus {
   background-color: var(--basic-darker-green);
 }
 
@@ -92,7 +95,8 @@ img {
   background-color: var(--basic-yellow);
 }
 
-.btn--yellow:hover {
+.btn--yellow:hover,
+.btn--yellow:focus {
   background-color: var(--basic-darker-yellow);
 }
 
@@ -152,7 +156,8 @@ img {
   margin-right: 45px;
 }
 
-.site-nav-link:hover {
+.site-nav-link:hover,
+.site-nav-link:focus {
   color: var(--basic-red);
 }
 
@@ -281,7 +286,8 @@ img {
   margin-top: 38px
 }
 
-.feature-button:hover {
+.feature-button:hover,
+.feature-button:focus {
   background-color: var(--basic-darker-red);
 }
 
@@ -459,7 +465,8 @@ img {
   opacity: 0.2;
 }
 
-.img-logo:hover {
+.img-logo:hover,
+.img-logo:focus {
   opacity: 1;
 }
 
@@ -627,7 +634,8 @@ img {
   background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFF;
 }
 
-.social-button:hover {
+.social-button:hover,
+.social-button:active {
   background: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
 }
 
@@ -659,9 +667,6 @@ img {
   margin-top: 30px;
   margin-left: 31px;
 }
-
-
-
 
 
 .promo-text {
@@ -709,17 +714,34 @@ img {
   left: 433px;
 }
 
-
-
 .main-title {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-  display: block;
+  grid-column: 1/-1;
   text-align: center;
   margin-top: 0;
-  padding-bottom: 100px;
+  margin-bottom: 57px;
+  padding-top: 71px;
+  padding-bottom: 108px;
   background-color: var(--basic-grey);
+  /* BUG как сделать этот грид элемент? не включать его??? */
+  /* width: 11111111111%; */
+}
+
+
+
+.container-catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.filter {
+  grid-row: 2/4;
+  margin-left: auto;
+  margin-right: 320px;
 }
 
 /* Filter Range */
@@ -736,12 +758,16 @@ img {
   margin-top: 49px;
 }
 
-.filter-item legend {
+.range-filter-title,
+.radio-btn-title,
+.checkbox-title,
+.sort-title {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 30px;
   text-transform: uppercase;
   font-weight: 700;
 }
+
 
 .range-controls {
   position: relative;
@@ -811,17 +837,35 @@ img {
   font-size: inherit;
 }
 
+.radio-btn-list,
+.checkbox-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn--text {
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--radio-check-btn-color)
+}
+
+.filter-item {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 .sort {
   display: flex;
-  width: 760px;
-  margin: 0 auto;
+  width: 830px;
+  margin-left: -250px;
   /* outline: 1px solid; */
 }
 
 .sort-title {
-  text-transform: uppercase;
-  font-weight: 700;
-  width: 380px;
+  margin-left: 70px;
+  width: 400px;
 }
 
 .sort-list {
@@ -829,25 +873,68 @@ img {
   display: flex;
   margin: 0;
   padding: 0;
+  margin-top: 5px;
+  min-width: 362;
 }
 
 .sort-item {
   text-transform: uppercase;
-  margin-right: 20px;
+  margin-right: 27px;
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.3;
 }
 
+.sort-item--current {
+  opacity: 1;
+}
+
+.browser-window {
+  width: 360px;
+  height: 40px;
+  background-color: var(--window-rest);
+  opacity: 0.12;
+  position: relative;
+  display: flex;
+  border-radius: 5px 5px 0 0;
+  margin-top: -41px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--window-rest);
+  box-shadow: var(--window-rest-shadow);
+  border: 1px solid white;
+  margin-right: 7px;
+  margin-top: 12px;
+}
+
+.dot:nth-child(1) {
+  margin-left: 15px;
+}
 
 
 .catalog-list {
   list-style: none;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
   width: 780px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0 auto;
   padding: 0;
+  margin-left: -180px;
+  margin-right: 0;
+  margin-top: 87px;
+}
+
+.catalog-item:nth-child(2n) {
+  margin-left: 40px;
+}
+
+.modal {
+  width: 360px;
+  background-color: var(--basic-grey);
 }
 
 .modal-title {
