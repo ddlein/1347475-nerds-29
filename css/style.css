@@ -25,6 +25,7 @@
   --window-rest-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --modal-subtitle: #666666;
   --radio-check-btn-color: #283136;
+  --pagination-border: #DBDBDB;
 }
 
 /* Global */
@@ -725,8 +726,6 @@ img {
   padding-top: 71px;
   padding-bottom: 108px;
   background-color: var(--basic-grey);
-  /* BUG как сделать этот грид элемент? не включать его??? */
-  /* width: 11111111111%; */
 }
 
 
@@ -813,9 +812,16 @@ img {
   left: 160px;
 }
 
+/* .min-price input {
+  margin-left: 15px;
+  padding-bottom: 10px;
+  margin-top: -5px;
+} */
+
 .price-controls {
   display: flex;
   justify-content: space-between;
+  margin-top: -5px;
 }
 
 .price-controls label {
@@ -837,11 +843,67 @@ img {
   font-size: inherit;
 }
 
+/* Radio box */
+
 .radio-btn-list,
 .checkbox-list {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.radio-btn-list {
+  margin-top: 13px;
+}
+
+.radio-btn-title {
+  margin-top: 54px;
+}
+
+.filter-radio-btn,
+.checkbox-btn {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.radio-btn-item {
+  display: flex;
+  align-items: center;
+}
+
+.radio-btn-item > label {
+  margin-left: 10px;
+}
+
+.radio-btn-item:nth-child(2) {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.filter-radio-btn::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/radio-off.svg);
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+
+.filter-radio-btn:hover::before,
+.filter-radio-btn:focus::before {
+  background-image: url(../img/radio-off-hover.svg);
+  outline: none;
+}
+
+.filter-radio-btn:checked::before {
+  background-image: url(../img/radio-on.svg);
+}
+
+.filter-radio-btn:checked:hover::before,
+.filter-radio-btn:checked:focus::before {
+  background-image: url(../img/radio-on-hover.svg);
+  outline: none;
 }
 
 .btn--text {
@@ -855,6 +917,16 @@ img {
   margin: 0;
   border: 0;
 }
+
+
+
+/* Checkbox */
+
+.checkbox-title {
+  margin-top: 40px;
+}
+
+/* Sort */
 
 .sort {
   display: flex;
@@ -928,13 +1000,25 @@ img {
   margin-top: 87px;
 }
 
+.catalog-item {
+  position: relative;
+}
+
 .catalog-item:nth-child(2n) {
   margin-left: 40px;
 }
 
+.catalog-item:nth-child(n+3) {
+  margin-top: 65px;
+}
+
+
 .modal {
   width: 360px;
   background-color: var(--basic-grey);
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
 }
 
 .modal-title {
@@ -943,12 +1027,28 @@ img {
   font-size: 18px;
   text-transform: uppercase;
   color: var(--basic-black);
+  display: inline-block;
+}
+
+.catalog-item:nth-child(1) .modal-title {
+  margin-bottom: 2px;
+  margin-left: 145px;
+  padding-bottom: 10px;
+  margin-top: 25px;
 }
 
 .modal-subtitle {
   font-size: 16px;
   line-height: 18px;
   color: var(--modal-subtitle);
+  
+}
+
+.catalog-item:nth-child(1) .modal-subtitle {
+  text-align: center;
+  margin-left: -5px;
+  margin-bottom: 32px;
+  margin-top: 0;
 }
 
 .modal-button {
@@ -959,20 +1059,60 @@ img {
   width: 200px;
   text-align: center;
   border-radius: 3px;
-  padding: 15px;
+  padding: 17px;
   line-height: 18px;
   border: 0;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .pagination-list {
   list-style: none;
-  margin: 20px auto;
-  padding: 0;
+  margin-top: 51px;
+  margin-left: -180px;
+  margin-bottom: 60px;
   display: flex;
-  justify-content: space-around;
-  width: 300px;
+  padding: 0;
 }
 
 .pagination-link {
+  display: block;
   color: var(--basic-black);
+  line-height: 18px;
+  font-weight: 500;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: var(--basic-grey);
+  margin-right: 11px;
+  padding-top: 17px;
+}
+
+
+.pagination-link--current {
+  border: 3px solid var(--pagination-border);
+  background-color: white;
+  padding-top: 14px;
+}
+
+.pagination-link--next {
+  width: 260px;
+  text-transform: uppercase;
+}
+
+.btn--grey {
+  background-color: var(--basic-grey);
+}
+
+.btn--grey:hover,
+.btn--grey:focus {
+  background-color: var(--basic-darker-grey);
+}
+
+.btn--grey:active {
+  background-color: var(--basic-extra-gray);
+  box-shadow: var(--click-shadow);
 }

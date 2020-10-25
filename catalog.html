@@ -33,7 +33,6 @@
   </header>
   <main class="container-catalog">
     <h1 class="main-title">Магазин готовых шаблонов</h1>
-    <!-- TODO изменить чекбоксы и радио fieldset и т.д. есть видео в ПР -->
     <section class="filter">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form method="get" action="">
@@ -101,13 +100,13 @@
               <input class="checkbox-btn" type="checkbox" name="choose-features" value="gallery" id="gallery-check">
               <label for="gallery-check">Галерея</label>
             </li>
-            <li class="checkbox-item btn--text">
+            <li class="checkbox-item btn--text ">
               <input class="checkbox-btn" type="checkbox" name="choose-features" value="basket" id="basket-check">
               <label for="basket-check">Корзина</label>
             </li>
           </ul>
         </fieldset>
-        <button class="show-choosen">Показать</button>
+        <button class="show-choosen btn--grey">Показать</button>
       </form>
     </section>
     <section class="sort">
@@ -128,10 +127,10 @@
             <span class="dot"></span>
             <span class="dot"></span>
           </div>
-          <img src="img/sedona.jpg" width="358" height="578" alt="Sedona Сайт для туристов">
+          <img src="img/sedona.jpg" width="360" height="578" alt="Sedona Сайт для туристов">
           <div class="modal">
             <a class="modal-title" href="">Sedona</a>
-            <p class="modal-subtitle">Информационный сайт для туристов</p>
+            <p class="modal-subtitle">Информационный сайт<br> для туристов</p>
             <button class="modal-button btn--red">9900₽</button>
           </div>
         </li>
@@ -203,16 +202,16 @@
       </ul>
       <ul class="pagination-list">
         <li class="pagination-item">
-          <a class="pagination-link">1</a>
+          <a class="pagination-link pagination-link--current">1</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">2</a>
+          <a class="pagination-link btn--grey" href="#">2</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">3</a>
+          <a class="pagination-link btn--grey" href="#">3</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link" href="#">Следующая</a>
+          <a class="pagination-link pagination-link--next btn--grey" href="#">Следующая</a>
         </li>
       </ul>
     </section>
