@@ -874,6 +874,7 @@ img {
 
 .radio-btn-item > label {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .radio-btn-item:nth-child(2) {
@@ -893,7 +894,6 @@ img {
 .filter-radio-btn:hover::before,
 .filter-radio-btn:focus::before {
   background-image: url(../img/radio-off-hover.svg);
-  outline: none;
 }
 
 .filter-radio-btn:checked::before {
@@ -903,8 +903,25 @@ img {
 .filter-radio-btn:checked:hover::before,
 .filter-radio-btn:checked:focus::before {
   background-image: url(../img/radio-on-hover.svg);
+}
+
+.filter-radio-btn:hover,
+.filter-radio-btn:focus {
   outline: none;
 }
+
+.filter-radio-btn:disabled::before {
+  background-image: url(../img/radio-off-block.svg);
+}
+
+.filter-radio-btn:checked:disabled::before {
+  background-image: url(../img/radio-on-block.svg);
+}
+
+/* .filter-radio-btn:disabled:hover::before,
+.filter-radio-btn:disabled:focus::before {
+  background-image: url(../img/radio-off-.svg);
+} */
 
 .btn--text {
   font-size: 16px;
@@ -917,7 +934,6 @@ img {
   margin: 0;
   border: 0;
 }
-
 
 
 /* Checkbox */
