@@ -33,193 +33,207 @@
   </header>
   <main class="container-catalog">
     <h1 class="main-title">Магазин готовых шаблонов</h1>
-    <section class="filter">
-      <h2 class="visually-hidden">Фильтр товаров</h2>
-      <form method="get" action="">
-        <fieldset class="filter-item">
-          <legend class="range-filter-title">Стоимость:</legend>
-          <div class="range-filter">
-            <div class="range-controls">
-              <div class="scale">
-                <div class="bar" style="
-                    width: 30%;
-                    margin-left: 20%
+    
+    <section class="products--container">
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form method="get" action="https://echo.htmlacademy.ru/">
+          <fieldset class="filter-item">
+            <legend class="range-filter-title">Стоимость:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="
+                    width: 60%;
+                    margin-left: 7%
                   "></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="
+                  left: 7%
+                "></div>
+                <div class="toggle toggle-max" tabindex="0" style="
+                  left: 61%
+                "></div>
               </div>
-              <div class="toggle toggle-min" tabindex="0" style="
-                  left: 20%
-                "></div>
-              <div class="toggle toggle-max" tabindex="0" style="
-                  left: 50%
-                "></div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="15000">
+                </label>
+              </div>
             </div>
-            <div class="price-controls">
-              <label class="min-price">
-                от <input type="number" name="min-price" value="0">
-              </label>
-              <label class="max-price">
-                до <input type="number" name="max-price" value="15000">
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="filter-item">
-          <legend class="radio-btn-title">Сетка</legend>
-          <ul class="radio-btn-list">
-            <li class="radio-btn-item btn--text">
-              <input class="filter-radio-btn" type="radio" name="sorting" value="adaptive" id="adaptive-layout" checked>
-              <label for="adaptive-layout">Адаптивная</label>
+          </fieldset>
+          <fieldset class="filter-item">
+            <legend class="radio-btn-title">Сетка:</legend>
+            <ul class="radio-btn-list">
+              <li class="radio-btn-item btn--text">
+                <input class="filter-radio-btn" type="radio" name="sorting" value="adaptive" id="adaptive-layout"
+                  checked>
+                <label for="adaptive-layout">Адаптивная</label>
+              </li>
+              <li class="radio-btn-item btn--text">
+                <input class="filter-radio-btn" type="radio" name="sorting" value="fix" id="fix-layout">
+                <label for="fix-layout">Фиксированная</label>
+              </li>
+              <li class="radio-btn-item btn--text">
+                <input class="filter-radio-btn" type="radio" name="sorting" value="flex" id="flex-layout">
+                <label for="flex-layout">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-item">
+            <legend class="checkbox-title">Особенности:</legend>
+            <ul class="checkbox-list">
+              <li class="checkbox-item btn--text">
+                <input class="checkbox-btn" type="checkbox" name="choose-features" value="slider" id="slider-check"
+                  checked>
+                <label for="slider-check">Слайдер</label>
+              </li>
+              <li class="checkbox-item btn--text">
+                <input class="checkbox-btn" type="checkbox" name="choose-features" value="block" id="block-check">
+                <label for="block-check">Блок преимуществ</label>
+              </li>
+              <li class="checkbox-item btn--text">
+                <input class="checkbox-btn" type="checkbox" name="choose-features" value="news" id="news-check" checked>
+                <label for="news-check">Новости</label>
+              </li>
+              <li class="checkbox-item btn--text">
+                <input class="checkbox-btn" type="checkbox" name="choose-features" value="gallery" id="gallery-check">
+                <label for="gallery-check">Галерея</label>
+              </li>
+              <li class="checkbox-item btn--text ">
+                <input class="checkbox-btn" type="checkbox" name="choose-features" value="basket" id="basket-check">
+                <label for="basket-check">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="show-choosen btn--grey" type="submit">Показать</button>
+        </form>
+      </section>
+      <div class="products--wrapper">
+        <section class="sort">
+          <h2 class="visually-hidden">Сортировка товара</h2>
+          <span class="sort-title">Сортировать:</span>
+          <ul class="sort-list">
+            <li class="sort-item sort-item--current">
+              <a class="sort-item-link" href="">По цене</a>
             </li>
-            <li class="radio-btn-item btn--text">
-              <input class="filter-radio-btn" type="radio" name="sorting" value="fix" id="fix-layout">
-              <label for="fix-layout">Фиксированная</label>
+            <li class="sort-item">
+              <a class="sort-item-link" href="#">По типу</a>
             </li>
-            <li class="radio-btn-item btn--text">
-              <input class="filter-radio-btn" type="radio" name="sorting" value="flex" id="flex-layout">
-              <label for="flex-layout">Резиновая</label>
+            <li class="sort-item">
+              <a class="sort-item-link" href="#">По названию</a>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="filter-item">
-          <legend class="checkbox-title">Особенности</legend>
-          <ul class="checkbox-list">
-            <li class="checkbox-item btn--text">
-              <input class="checkbox-btn" type="checkbox" name="choose-features" value="slider" id="slider-check"
-                checked>
-              <label for="slider-check">Слайдер</label>
+          <ul class="button-reverse-list">
+            <li class="btn-reverse-item">
+              <button class="btn-sort down" type="button"></button>
             </li>
-            <li class="checkbox-item btn--text">
-              <input class="checkbox-btn" type="checkbox" name="choose-features" value="block" id="block-check">
-              <label for="block-check">Блок преимуществ</label>
-            </li>
-            <li class="checkbox-item btn--text">
-              <input class="checkbox-btn" type="checkbox" name="choose-features" value="news" id="news-check" checked>
-              <label for="news-check">Новости</label>
-            </li>
-            <li class="checkbox-item btn--text">
-              <input class="checkbox-btn" type="checkbox" name="choose-features" value="gallery" id="gallery-check">
-              <label for="gallery-check">Галерея</label>
-            </li>
-            <li class="checkbox-item btn--text ">
-              <input class="checkbox-btn" type="checkbox" name="choose-features" value="basket" id="basket-check">
-              <label for="basket-check">Корзина</label>
+            <li class="btn-reverse-item">
+              <button class="btn-sort up" type="button"></button>
             </li>
           </ul>
-        </fieldset>
-        <button class="show-choosen btn--grey">Показать</button>
-      </form>
-    </section>
-    <section class="sort">
-      <h2 class="visually-hidden">Сортировка товара</h2>
-      <span class="sort-title">Сортировать:</span>
-      <ul class="sort-list">
-        <li class="sort-item sort-item--current">
-          <a class="sort-item-link" href="">По цене</a>
-        </li>
-        <li class="sort-item">
-          <a class="sort-item-link" href="#">По типу</a>
-        </li>
-        <li class="sort-item">
-          <a class="sort-item-link" href="#">По названию</a>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2 class="visually-hidden">Каталог сайтов</h2>
-      <ul class="catalog-list">
-        <li class="catalog-item">
-          <div class="browser-window">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <img src="img/sedona.jpg" width="360" height="578" alt="Sedona Сайт для туристов">
-          <div class="modal">
-            <a class="modal-title" href="">Sedona</a>
-            <p class="modal-subtitle">Информационный сайт<br> для туристов</p>
-            <button class="modal-button btn--red">9900&#8381;</button>
-          </div>
-        </li>
-        <li class="catalog-item">
-          <div class="browser-window">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <img src="img/pink.jpg" width="360" height="578" alt="Pink App Продуктовый лендинг">
-          <div class="modal">
-            <a class="modal-title" href="">Pink app</a>
-            <p class="modal-subtitle">Продуктовый лендинг<br> приложения для iOS и Android</p>
-            <button class="modal-button btn--red">9900&#8381;</button>
-          </div>
-        </li>
-        <li class="catalog-item">
-          <div class="browser-window">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <img src="img/borodinsky.jpg" width="360" height="578" alt="Барбершоп Бородинский">
-          <div class="modal">
-            <a class="modal-title" href="">Barbershop</a>
-            <p class="modal-subtitle">Сайт салона красоты.<br> Для мужчин, да.</p>
-            <button class="modal-button btn--red">9900&#8381;</button>
-          </div>
-        </li>
-        <li class="catalog-item">
-          <div class="browser-window">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <img src="img/mishka.jpg" width="360" height="578" alt="Mishka интернет-магазин вязаных игрушек">
-          <div class="modal">
-            <a class="modal-title" href="">Mishka</a>
-            <p class="modal-subtitle">Интернет-магазин<br> вязаных игрушек</p>
-            <button class="modal-button btn--red">9900&#8381;</button>
-          </div>
-        </li>
-        <li class="catalog-item">
-          <div class="browser-window">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <img src="img/a-plus.jpg" width="360" height="578" alt="A plus лендинг курсов">
-          <div class="modal">
-            <a class="modal-title" href="">A plus</a>
-            <p class="modal-subtitle">Лендинг курсов повышения<br> квалификации</p>
-            <button class="modal-button btn--red">9900&#8381;</button>
-          </div>
-        </li>
-        <li class="catalog-item">
-          <div class="browser-window">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <img src="img/kvast.jpg" width="360" height="578" alt="Кваст промо-сайт кваса">
-          <div class="modal">
-            <a class="modal-title" href="">Кваст</a>
-            <p class="modal-subtitle">Промо-сайт производителя<br> крафтового кваса</p>
-            <button class="modal-button btn--red">9900&#8381;</button>
-          </div>
-        </li>
-      </ul>
-      <ul class="pagination-list">
-        <li class="pagination-item">
-          <a class="pagination-link pagination-link--current">1</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link btn--grey" href="#">2</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link btn--grey" href="#">3</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link pagination-link--next btn--grey" href="#">Следующая</a>
-        </li>
-      </ul>
+        </section>
+        <section>
+          <h2 class="visually-hidden">Каталог сайтов</h2>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <div class="browser-window">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <img src="img/sedona.jpg" width="358" height="578" alt="Sedona Сайт для туристов">
+              <div class="modal">
+                <a class="modal-title" href="">Sedona</a>
+                <p class="modal-subtitle">Информационный сайт<br> для туристов</p>
+                <button class="modal-button btn--red">9900&#8381;</button>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <div class="browser-window">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <img src="img/pink.jpg" width="358" height="578" alt="Pink App Продуктовый лендинг">
+              <div class="modal">
+                <a class="modal-title" href="">Pink app</a>
+                <p class="modal-subtitle">Продуктовый лендинг<br> приложения для iOS и Android</p>
+                <button class="modal-button btn--red">9900&#8381;</button>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <div class="browser-window">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <img src="img/borodinsky.jpg" width="358" height="578" alt="Барбершоп Бородинский">
+              <div class="modal">
+                <a class="modal-title" href="">Barbershop</a>
+                <p class="modal-subtitle">Сайт салона красоты.<br> Для мужчин, да.</p>
+                <button class="modal-button btn--red">9900&#8381;</button>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <div class="browser-window">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <img src="img/mishka.jpg" width="358" height="578" alt="Mishka интернет-магазин вязаных игрушек">
+              <div class="modal">
+                <a class="modal-title" href="">Mishka</a>
+                <p class="modal-subtitle">Интернет-магазин<br> вязаных игрушек</p>
+                <button class="modal-button btn--red">9900&#8381;</button>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <div class="browser-window">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <img src="img/a-plus.jpg" width="358" height="578" alt="A plus лендинг курсов">
+              <div class="modal">
+                <a class="modal-title" href="">A plus</a>
+                <p class="modal-subtitle">Лендинг курсов повышения<br> квалификации</p>
+                <button class="modal-button btn--red">9900&#8381;</button>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <div class="browser-window">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <img src="img/kvast.jpg" width="358" height="578" alt="Кваст промо-сайт кваса">
+              <div class="modal">
+                <a class="modal-title" href="">Кваст</a>
+                <p class="modal-subtitle">Промо-сайт производителя<br> крафтового кваса</p>
+                <button class="modal-button btn--red">9900&#8381;</button>
+              </div>
+            </li>
+          </ul>
+          <ul class="pagination-list">
+            <li class="pagination-item">
+              <a class="pagination-link pagination-link--current">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link btn--grey" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link btn--grey" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-link--next btn--grey" href="#">Следующая</a>
+            </li>
+          </ul>
+        </section>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
