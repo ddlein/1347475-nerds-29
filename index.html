@@ -233,7 +233,7 @@
   </section>
   <section class="popup">
     <h1 class="popup-title">Напишите нам</h1>
-    <form class="write-us-form" action="https://echo.htmlacademy.ru">
+    <form class="write-us-form" method="get" action="https://echo.htmlacademy.ru">
       <p class="enter-name-title sub-title-popup">
         <label class="input-date" for="your-name">Ваше имя:</label>
         <input class="text-area enter-name enter" type="text" name="name" id="your-name" placeholder="Имя Фамилия">
@@ -244,10 +244,11 @@
       </p>
       <p class="enter-text-title sub-title-popup">
         <label class="input-date" for="letter-text">Текст письма:</label>
-        <input class="text-area write-letter" type="text" name="letter" id="letter-text" placeholder="В свободной форме">
+        <textarea class="text-area write-letter" type="text" name="letter" id="letter-text" placeholder="В свободной форме"></textarea>
       </p>
       <button class="button-send-form btn--red" aria-label="Отправить письмо">Отправить</button>
     </form>
+    <button class="close-popup" type="button" aria-label="Закрыть окно"></button>
   </section>
 </body>
 

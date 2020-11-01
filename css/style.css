@@ -241,6 +241,20 @@ img {
   background-position-y: -7px;
 }
 
+.second-slide {
+  background-image: url(../img/second-slide.svg);
+  background-repeat: no-repeat;
+  background-position-x: 397px;
+  background-position-y: -7px;
+}
+
+.third-slide {
+  background-image: url(../img/third-slide.svg);
+  background-repeat: no-repeat;
+  background-position-x: 397px;
+  background-position-y: -7px;
+}
+
 .top-block {
   background-color: var(--basic-grey);
   list-style: none;
@@ -1284,6 +1298,28 @@ input[type="number"] {
   min-height: 590px;
   filter: var(--popup-shadow);
   background-color: var(--basic-white);
+  position: relative;
+}
+
+
+.close-popup {
+  background-image: url(../img/close-cross.svg);
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  right: 90px;
+  top: 77px;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+  background-image: url(../img/close-cross-hover.svg);
+}
+
+.close-popup:active {
+  background-image: url(../img/close-cross-active.svg);
 }
 
 .popup-title {
@@ -1303,22 +1339,23 @@ input[type="number"] {
 }
 
 .enter-name {
-  margin-right: 42px;
+  margin-right: 40px;
 }
 
+
 .enter {
-  padding-top: 14px;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  padding-right: 143px;
-  margin-bottom: 10px;
+  width: 341px;
+  height: 45px;
+  padding-left: 14px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .write-letter {
+  width: 741px;
+  height: 101px;
+  padding-left: 15px;
   padding-top: 13px;
-  padding-left: 16px;
-  padding-right: 547px;
-  padding-bottom: 83px;
 }
 
 .write-us-form {
@@ -1329,12 +1366,12 @@ input[type="number"] {
 }
 .input-date {
   display: block;
-  margin-top: 20px;
+  margin-top: 23px;
   margin-bottom: 10px;
 }
 
-.enter-text-title>.input-date {
-  margin-top: -9px;
+.enter-text-title {
+  margin-top: -5px;
 }
 
 .button-send-form {
@@ -1354,4 +1391,5 @@ input[type="number"] {
 .text-area {
   border: 2px solid var(--scale-color);
   border-radius: 2px;
+  
 }
