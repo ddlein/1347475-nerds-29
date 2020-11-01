@@ -236,7 +236,7 @@
     <form class="write-us-form" method="get" action="https://echo.htmlacademy.ru">
       <p class="enter-name-title sub-title-popup">
         <label class="input-date" for="your-name">Ваше имя:</label>
-        <input class="enter-name enter" type="text" name="name" id="your-name" pattern="\D [^0-9]" placeholder="Имя Фамилия">
+        <input class="enter-name enter" type="text" name="name" id="your-name" pattern="^[А-Яа-яЁё\s]+$" placeholder="Имя Фамилия">
       </p>
       <p class="enter-emal-title sub-title-popup">
         <label class="input-date" for="your-email">Ваш email:</label>
@@ -244,7 +244,7 @@
       </p>
       <p class="enter-text-title sub-title-popup">
         <label class="input-date" for="letter-text">Текст письма:</label>
-        <textarea class="text-area write-letter" type="text" name="letter" id="lettдer-text" placeholder="В свободной форме"></textarea>
+        <textarea class="text-area write-letter" type="text" name="letter" id="letter-text" placeholder="В свободной форме"></textarea>
       </p>
       <button class="button-send-form btn--red">Отправить</button>
     </form>
