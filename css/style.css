@@ -25,13 +25,13 @@
   --window-rest-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --modal-subtitle: #666666;
   --radio-check-btn-color: #283136;
+  --radio-check-btn-disabled: rgba(40,49,54,0.3);
   --pagination-border: #DBDBDB;
   --border-item: #DADADA;
   --scale-color: #d7dcde;
   --scale-color-bar: #00ca74;
   --range-control-toogle: #ababab;
   --shadow-range-control: 0 2px 1px 0 #cfcfcf;
-  --price-control-input: #283136;
   --shadow-catalog-item: 0px 6px 15px rgba(0, 1, 1, 0.25);
   --header-logo-active: #A6A6A6;
   --popup-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -190,6 +190,7 @@ img {
 .basket::before {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   background-image: url(../img/basket-icon.svg);
   background-repeat: no-repeat;
   width: 15px;
@@ -224,23 +225,15 @@ img {
 .slider-controls button {
   width: 18px;
   height: 18px;
-  background-color: white;
+  background-color: var(--basic-white);
   border-radius: 50%;
   cursor: pointer;
   border: none;
 }
 
 
-/* Main */
-
-/* .third-slide,
-.second-slide {
-  display: none;
-} */
-
-
 .first-slide {
-  background-image: url(../img/first-slide.svg);
+  background-image: url(../img/nerds-index-slide1.png);
   background-repeat: no-repeat;
   background-position-x: 397px;
   background-position-y: -7px;
@@ -248,7 +241,7 @@ img {
 }
 
 .second-slide {
-  background-image: url(../img/second-slide.svg);
+  background-image: url(../img/nerds-index-slide2.png);
   background-repeat: no-repeat;
   background-position-x: 397px;
   background-position-y: -7px;
@@ -256,7 +249,7 @@ img {
 }
 
 .third-slide {
-  background-image: url(../img/third-slide.svg);
+  background-image: url(../img/nerds-index-slide3.png);
   background-repeat: no-repeat;
   background-position-x: 397px;
   background-position-y: -7px;
@@ -308,7 +301,7 @@ img {
 
 .feature-subtitle {
   padding-top: 10px;
-  width: 400px;
+  width: 500px;
 }
 
 .feature-button {
@@ -375,9 +368,7 @@ img {
 
 }
 
-
 /* About us */
-
 
 .about::before {
   content: "";
@@ -437,6 +428,7 @@ img {
 .about-offer-item::before {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 25px;
   height: 2px;
   background-color: var(--basic-red);
@@ -467,6 +459,7 @@ img {
 
 .percents {
   display: inline-block;
+  vertical-align: middle;
   font-size: 26px;
   line-height: 40px;
 }
@@ -538,6 +531,7 @@ img {
   content: "";
   position: absolute;
   display: inline-block;
+  vertical-align: middle;
   right: -20px;
   width: 2px;
   height: 52px;
@@ -557,7 +551,7 @@ img {
 }
 
 .contacts {
-  background-color: white;
+  background-color: var(--basic-white);
   width: 319px;
   position: absolute;
   padding: 0;
@@ -571,6 +565,7 @@ img {
   position: relative;
   margin: 0 auto;
   height: 416px;
+  background-color: var(--basic-grey);
 }
 
 .map {
@@ -666,6 +661,7 @@ img {
 
 .social-button {
   display: inline-block;
+  vertical-align: middle;
   width: 81px;
   height: 81px;
   border-radius: 50%;
@@ -744,6 +740,7 @@ img {
 .current-page::after {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 74px;
   height: 2px;
   background-color: var(--basic-red);
@@ -851,11 +848,6 @@ img {
   left: 160px;
 }
 
-/* .min-price input {
-  margin-left: 15px;
-  padding-bottom: 10px;
-  margin-top: -5px;
-} */
 
 .price-controls {
   display: flex;
@@ -874,7 +866,7 @@ img {
   padding: 10px;
   margin-left: 10px;
   text-align: center;
-  color: var(--price-control-input);
+  color: var(--radio-check-btn-color);
   border: none;
   border-radius: 5px;
   background: var(--basic-grey);
@@ -935,6 +927,7 @@ input[type="number"] {
 .filter-radio-btn::before {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
   width: 25px;
@@ -964,15 +957,23 @@ input[type="number"] {
   background-image: url(../img/radio-off-block.svg);
 }
 
+.filter-radio-btn:disabled + label {
+  color: var(--radio-check-btn-disabled);
+}
+
 .filter-radio-btn:checked:disabled::before {
   background-image: url(../img/radio-on-block.svg);
+}
+
+.filter-radio-btn:checked:disabled + label {
+  color: var(--radio-check-btn-disabled);
 }
 
 
 .btn--text {
   font-size: 16px;
   line-height: 19px;
-  color: var(--radio-check-btn-color)
+  color: var(--radio-check-btn-color);
 }
 
 .filter-item {
@@ -998,6 +999,7 @@ input[type="number"] {
 .checkbox-btn:before {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
   width: 25px;
@@ -1022,8 +1024,16 @@ input[type="number"] {
   background-image: url(../img/checkbox-off-block.svg);
 }
 
+.checkbox-btn:disabled + label{
+  color: var(--radio-check-btn-disabled);
+}
+
 .checkbox-btn:checked:disabled::before {
   background-image: url(../img/checkbox-on-block.svg);
+}
+
+.checkbox-btn:checked:disabled + label {
+  color: var(--radio-check-btn-disabled);
 }
 
 .checkbox-btn:hover,
@@ -1073,6 +1083,7 @@ input[type="number"] {
 .sort-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-top: 5px;
@@ -1130,10 +1141,14 @@ input[type="number"] {
   cursor: pointer;
 }
 
+
 .down {
   background-image: url(../img/icon-down.svg);
 }
 
+.active-btn {
+  opacity: 1;
+}
 .up {
   background-image: url(../img/icon-up.svg);
 }
@@ -1191,8 +1206,6 @@ input[type="number"] {
   text-align: center;
 }
 
-/* TODO добавить shadow при наведении */
-
 .catalog-item:hover {
   box-shadow: var(--shadow-catalog-item);
 }
@@ -1226,6 +1239,7 @@ input[type="number"] {
   text-transform: uppercase;
   color: var(--basic-black);
   display: inline-block;
+  vertical-align: middle;
 }
 
 .modal-subtitle {
@@ -1329,7 +1343,6 @@ input[type="number"] {
 .popup-error {
   animation: shake 0.6s;
 }
-
 
 .close-popup {
   background-image: url(../img/close-cross.svg);

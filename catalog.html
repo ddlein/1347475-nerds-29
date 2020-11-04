@@ -33,8 +33,7 @@
   </header>
   <main class="container-catalog">
     <h1 class="main-title">Магазин готовых шаблонов</h1>
-
-    <section class="products--container">
+    <div class="products--container">
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form method="get" action="https://echo.htmlacademy.ru/">
@@ -129,7 +128,7 @@
           </ul>
           <ul class="button-reverse-list">
             <li class="btn-reverse-item">
-              <button class="btn-sort down" type="button" aria-label="Кнопка сортировки вниз"></button>
+              <button class="btn-sort down active-btn" type="button" aria-label="Кнопка сортировки вниз"></button>
             </li>
             <li class="btn-reverse-item">
               <button class="btn-sort up" type="button" aria-label="Кнопка сортировки вверх"></button>
@@ -204,7 +203,7 @@
           </ul>
         </section>
       </div>
-    </section>
+    </div>
   </main>
   <footer class="main-footer">
     <h2 class="visually-hidden">Контактная информация</h2>
@@ -215,7 +214,7 @@
         ул. Б. Конюшенная, д. 19/8
       </address>
       <a class="phone-number" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-      <a class="button-contacts btn--red" href="">Напишите нам</a>
+      <a class="button-contacts btn--red" href="form.html">Напишите нам</a>
     </div>
     <div class="maps">
       <iframe class="map"
@@ -247,7 +246,7 @@
   </footer>
 
   <section class="popup">
-    <h1 class="popup-title">Напишите нам</h1>
+    <h2 class="popup-title">Напишите нам</h2>
     <form class="write-us-form" method="get" action="https://echo.htmlacademy.ru">
       <p class="enter-name-title sub-title-popup">
         <label class="input-date" for="your-name">Ваше имя:</label>
@@ -260,7 +259,7 @@
       </p>
       <p class="enter-text-title sub-title-popup">
         <label class="input-date" for="letter-text">Текст письма:</label>
-        <textarea class="text-area write-letter" type="text" name="letter" id="letter-text"
+        <textarea class="text-area write-letter" name="letter" id="letter-text"
           placeholder="В свободной форме"></textarea>
       </p>
       <button class="button-send-form btn--red">Отправить</button>
