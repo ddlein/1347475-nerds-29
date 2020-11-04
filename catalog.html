@@ -33,7 +33,7 @@
   </header>
   <main class="container-catalog">
     <h1 class="main-title">Магазин готовых шаблонов</h1>
-    
+
     <section class="products--container">
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -245,6 +245,29 @@
       <p class="promo-text">Скидка 10% для друзей из социальных сетей.</p>
     </section>
   </footer>
+
+  <section class="popup">
+    <h1 class="popup-title">Напишите нам</h1>
+    <form class="write-us-form" method="get" action="https://echo.htmlacademy.ru">
+      <p class="enter-name-title sub-title-popup">
+        <label class="input-date" for="your-name">Ваше имя:</label>
+        <input class="enter-name enter" type="text" name="name" id="your-name" pattern="^[А-Яа-яЁё\s]+$"
+          placeholder="Имя Фамилия">
+      </p>
+      <p class="enter-emal-title sub-title-popup">
+        <label class="input-date" for="your-email">Ваш email:</label>
+        <input class="enter-email enter" type="email" name="email" id="your-email" placeholder="email@example.com">
+      </p>
+      <p class="enter-text-title sub-title-popup">
+        <label class="input-date" for="letter-text">Текст письма:</label>
+        <textarea class="text-area write-letter" type="text" name="letter" id="letter-text"
+          placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="button-send-form btn--red">Отправить</button>
+    </form>
+    <button class="close-popup" type="button" aria-label="Закрыть окно"></button>
+  </section>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>
