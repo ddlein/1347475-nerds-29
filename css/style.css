@@ -159,6 +159,7 @@ img {
   padding-top: 10px;
   padding-left: 203px;
   display: flex;
+  flex-wrap: wrap;
   width: 500px;
   position: relative;
 }
