@@ -3,12 +3,7 @@
 * Студент: [Дмитрий Леин](https://up.htmlacademy.ru/htmlcss/29/user/1347475).
 * Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/nyukalopavel).
 
----
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
-
----
 
 ### Памятка
 
